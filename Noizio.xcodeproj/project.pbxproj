@@ -32,6 +32,8 @@
 		BD430F1F1CB0F939005EC16D /* 14_sound_whale_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F0F1CB0F939005EC16D /* 14_sound_whale_1.caf */; };
 		BD430F201CB0F939005EC16D /* purr-purr.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F101CB0F939005EC16D /* purr-purr.caf */; };
 		BD430F241CB0FD79005EC16D /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430F231CB0FD79005EC16D /* NavViewController.m */; };
+		BD430F271CB101E6005EC16D /* DSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430F261CB101E6005EC16D /* DSButton.m */; };
+		BD430F2A1CB104DB005EC16D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430F291CB104DB005EC16D /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,10 @@
 		BD430F101CB0F939005EC16D /* purr-purr.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "purr-purr.caf"; sourceTree = "<group>"; };
 		BD430F221CB0FD79005EC16D /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
 		BD430F231CB0FD79005EC16D /* NavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
+		BD430F251CB101E6005EC16D /* DSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSButton.h; sourceTree = "<group>"; };
+		BD430F261CB101E6005EC16D /* DSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSButton.m; sourceTree = "<group>"; };
+		BD430F281CB104DB005EC16D /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		BD430F291CB104DB005EC16D /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		CD7060125F39158F63A8619F /* Pods-Noizio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noizio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Noizio/Pods-Noizio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,8 +129,12 @@
 				BD430EEC1CB0F79F005EC16D /* AppDelegate.m */,
 				BD430EEE1CB0F79F005EC16D /* ViewController.h */,
 				BD430EEF1CB0F79F005EC16D /* ViewController.m */,
+				BD430F281CB104DB005EC16D /* AboutViewController.h */,
+				BD430F291CB104DB005EC16D /* AboutViewController.m */,
 				BD430F221CB0FD79005EC16D /* NavViewController.h */,
 				BD430F231CB0FD79005EC16D /* NavViewController.m */,
+				BD430F251CB101E6005EC16D /* DSButton.h */,
+				BD430F261CB101E6005EC16D /* DSButton.m */,
 				BD430EF11CB0F79F005EC16D /* Main.storyboard */,
 				BD430EF41CB0F79F005EC16D /* Assets.xcassets */,
 				BD430EF61CB0F79F005EC16D /* LaunchScreen.storyboard */,
@@ -201,6 +211,11 @@
 				TargetAttributes = {
 					BD430EE41CB0F79F005EC16D = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -305,10 +320,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD430F2A1CB104DB005EC16D /* AboutViewController.m in Sources */,
 				BD430EF01CB0F79F005EC16D /* ViewController.m in Sources */,
 				BD430EED1CB0F79F005EC16D /* AppDelegate.m in Sources */,
 				BD430F241CB0FD79005EC16D /* NavViewController.m in Sources */,
 				BD430EEA1CB0F79F005EC16D /* main.m in Sources */,
+				BD430F271CB101E6005EC16D /* DSButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Noizio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DiegoSan.Noizio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,7 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Noizio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DiegoSan.Noizio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
