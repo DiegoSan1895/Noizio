@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B48800A307003B861F84B3E /* Pods_Noizio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10273F5460EC47CEBA82E7F5 /* Pods_Noizio.framework */; };
+		BD430EEA1CB0F79F005EC16D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430EE91CB0F79F005EC16D /* main.m */; };
+		BD430EED1CB0F79F005EC16D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430EEC1CB0F79F005EC16D /* AppDelegate.m */; };
+		BD430EF01CB0F79F005EC16D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430EEF1CB0F79F005EC16D /* ViewController.m */; };
+		BD430EF31CB0F79F005EC16D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD430EF11CB0F79F005EC16D /* Main.storyboard */; };
+		BD430EF51CB0F79F005EC16D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD430EF41CB0F79F005EC16D /* Assets.xcassets */; };
+		BD430EF81CB0F79F005EC16D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD430EF61CB0F79F005EC16D /* LaunchScreen.storyboard */; };
+		BD430F001CB0F920005EC16D /* SoundsSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD430EFF1CB0F920005EC16D /* SoundsSettings.plist */; };
+		BD430F111CB0F939005EC16D /* 0_sound_tea_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F011CB0F939005EC16D /* 0_sound_tea_1.caf */; };
+		BD430F121CB0F939005EC16D /* 1_sound_thunder_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F021CB0F939005EC16D /* 1_sound_thunder_1.caf */; };
+		BD430F131CB0F939005EC16D /* 2_sound_rain_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F031CB0F939005EC16D /* 2_sound_rain_1.caf */; };
+		BD430F141CB0F939005EC16D /* 3_sound_fire_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F041CB0F939005EC16D /* 3_sound_fire_1.caf */; };
+		BD430F151CB0F939005EC16D /* 4_sound_water_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F051CB0F939005EC16D /* 4_sound_water_1.caf */; };
+		BD430F161CB0F939005EC16D /* 5_sound_wind_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F061CB0F939005EC16D /* 5_sound_wind_1.caf */; };
+		BD430F171CB0F939005EC16D /* 6_sound_day_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F071CB0F939005EC16D /* 6_sound_day_1.caf */; };
+		BD430F181CB0F939005EC16D /* 7_sound_night_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F081CB0F939005EC16D /* 7_sound_night_1.caf */; };
+		BD430F191CB0F939005EC16D /* 8_sound_river_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F091CB0F939005EC16D /* 8_sound_river_1.caf */; };
+		BD430F1A1CB0F939005EC16D /* 9_sound_space_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F0A1CB0F939005EC16D /* 9_sound_space_1.caf */; };
+		BD430F1B1CB0F939005EC16D /* 10_sound_yacht_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F0B1CB0F939005EC16D /* 10_sound_yacht_1.caf */; };
+		BD430F1C1CB0F939005EC16D /* 11_sound_train_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F0C1CB0F939005EC16D /* 11_sound_train_1.caf */; };
+		BD430F1D1CB0F939005EC16D /* 12_sound_farm_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F0D1CB0F939005EC16D /* 12_sound_farm_1.caf */; };
+		BD430F1E1CB0F939005EC16D /* 13_sound_chimes_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F0E1CB0F939005EC16D /* 13_sound_chimes_1.caf */; };
+		BD430F1F1CB0F939005EC16D /* 14_sound_whale_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F0F1CB0F939005EC16D /* 14_sound_whale_1.caf */; };
+		BD430F201CB0F939005EC16D /* purr-purr.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD430F101CB0F939005EC16D /* purr-purr.caf */; };
+		BD430F241CB0FD79005EC16D /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430F231CB0FD79005EC16D /* NavViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10273F5460EC47CEBA82E7F5 /* Pods_Noizio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Noizio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		234E96C4B2B8A74709F379CF /* Pods-Noizio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noizio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Noizio/Pods-Noizio.release.xcconfig"; sourceTree = "<group>"; };
+		BD430EE51CB0F79F005EC16D /* Noizio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noizio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD430EE91CB0F79F005EC16D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD430EEB1CB0F79F005EC16D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD430EEC1CB0F79F005EC16D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BD430EEE1CB0F79F005EC16D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BD430EEF1CB0F79F005EC16D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BD430EF21CB0F79F005EC16D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD430EF41CB0F79F005EC16D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD430EF71CB0F79F005EC16D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD430EF91CB0F79F005EC16D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD430EFF1CB0F920005EC16D /* SoundsSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = SoundsSettings.plist; sourceTree = "<group>"; };
+		BD430F011CB0F939005EC16D /* 0_sound_tea_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0_sound_tea_1.caf; sourceTree = "<group>"; };
+		BD430F021CB0F939005EC16D /* 1_sound_thunder_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1_sound_thunder_1.caf; sourceTree = "<group>"; };
+		BD430F031CB0F939005EC16D /* 2_sound_rain_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2_sound_rain_1.caf; sourceTree = "<group>"; };
+		BD430F041CB0F939005EC16D /* 3_sound_fire_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3_sound_fire_1.caf; sourceTree = "<group>"; };
+		BD430F051CB0F939005EC16D /* 4_sound_water_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4_sound_water_1.caf; sourceTree = "<group>"; };
+		BD430F061CB0F939005EC16D /* 5_sound_wind_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5_sound_wind_1.caf; sourceTree = "<group>"; };
+		BD430F071CB0F939005EC16D /* 6_sound_day_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6_sound_day_1.caf; sourceTree = "<group>"; };
+		BD430F081CB0F939005EC16D /* 7_sound_night_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7_sound_night_1.caf; sourceTree = "<group>"; };
+		BD430F091CB0F939005EC16D /* 8_sound_river_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8_sound_river_1.caf; sourceTree = "<group>"; };
+		BD430F0A1CB0F939005EC16D /* 9_sound_space_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9_sound_space_1.caf; sourceTree = "<group>"; };
+		BD430F0B1CB0F939005EC16D /* 10_sound_yacht_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 10_sound_yacht_1.caf; sourceTree = "<group>"; };
+		BD430F0C1CB0F939005EC16D /* 11_sound_train_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 11_sound_train_1.caf; sourceTree = "<group>"; };
+		BD430F0D1CB0F939005EC16D /* 12_sound_farm_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 12_sound_farm_1.caf; sourceTree = "<group>"; };
+		BD430F0E1CB0F939005EC16D /* 13_sound_chimes_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 13_sound_chimes_1.caf; sourceTree = "<group>"; };
+		BD430F0F1CB0F939005EC16D /* 14_sound_whale_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 14_sound_whale_1.caf; sourceTree = "<group>"; };
+		BD430F101CB0F939005EC16D /* purr-purr.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "purr-purr.caf"; sourceTree = "<group>"; };
+		BD430F221CB0FD79005EC16D /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
+		BD430F231CB0FD79005EC16D /* NavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
+		CD7060125F39158F63A8619F /* Pods-Noizio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noizio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Noizio/Pods-Noizio.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD430EE21CB0F79F005EC16D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B48800A307003B861F84B3E /* Pods_Noizio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		132F7DD74E7A575C0B6C4DE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD7060125F39158F63A8619F /* Pods-Noizio.debug.xcconfig */,
+				234E96C4B2B8A74709F379CF /* Pods-Noizio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B29E4B8C27ED61BF6357A5EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10273F5460EC47CEBA82E7F5 /* Pods_Noizio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD430EDC1CB0F79F005EC16D = {
+			isa = PBXGroup;
+			children = (
+				BD430EE71CB0F79F005EC16D /* Noizio */,
+				BD430EE61CB0F79F005EC16D /* Products */,
+				132F7DD74E7A575C0B6C4DE3 /* Pods */,
+				B29E4B8C27ED61BF6357A5EE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BD430EE61CB0F79F005EC16D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD430EE51CB0F79F005EC16D /* Noizio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD430EE71CB0F79F005EC16D /* Noizio */ = {
+			isa = PBXGroup;
+			children = (
+				BD430EEB1CB0F79F005EC16D /* AppDelegate.h */,
+				BD430EEC1CB0F79F005EC16D /* AppDelegate.m */,
+				BD430EEE1CB0F79F005EC16D /* ViewController.h */,
+				BD430EEF1CB0F79F005EC16D /* ViewController.m */,
+				BD430F221CB0FD79005EC16D /* NavViewController.h */,
+				BD430F231CB0FD79005EC16D /* NavViewController.m */,
+				BD430EF11CB0F79F005EC16D /* Main.storyboard */,
+				BD430EF41CB0F79F005EC16D /* Assets.xcassets */,
+				BD430EF61CB0F79F005EC16D /* LaunchScreen.storyboard */,
+				BD430EF91CB0F79F005EC16D /* Info.plist */,
+				BD430EE81CB0F79F005EC16D /* Supporting Files */,
+			);
+			path = Noizio;
+			sourceTree = "<group>";
+		};
+		BD430EE81CB0F79F005EC16D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD430EE91CB0F79F005EC16D /* main.m */,
+				BD430EFF1CB0F920005EC16D /* SoundsSettings.plist */,
+				BD430F211CB0F93E005EC16D /* Sounds */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD430F211CB0F93E005EC16D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BD430F011CB0F939005EC16D /* 0_sound_tea_1.caf */,
+				BD430F021CB0F939005EC16D /* 1_sound_thunder_1.caf */,
+				BD430F031CB0F939005EC16D /* 2_sound_rain_1.caf */,
+				BD430F041CB0F939005EC16D /* 3_sound_fire_1.caf */,
+				BD430F051CB0F939005EC16D /* 4_sound_water_1.caf */,
+				BD430F061CB0F939005EC16D /* 5_sound_wind_1.caf */,
+				BD430F071CB0F939005EC16D /* 6_sound_day_1.caf */,
+				BD430F081CB0F939005EC16D /* 7_sound_night_1.caf */,
+				BD430F091CB0F939005EC16D /* 8_sound_river_1.caf */,
+				BD430F0A1CB0F939005EC16D /* 9_sound_space_1.caf */,
+				BD430F0B1CB0F939005EC16D /* 10_sound_yacht_1.caf */,
+				BD430F0C1CB0F939005EC16D /* 11_sound_train_1.caf */,
+				BD430F0D1CB0F939005EC16D /* 12_sound_farm_1.caf */,
+				BD430F0E1CB0F939005EC16D /* 13_sound_chimes_1.caf */,
+				BD430F0F1CB0F939005EC16D /* 14_sound_whale_1.caf */,
+				BD430F101CB0F939005EC16D /* purr-purr.caf */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD430EE41CB0F79F005EC16D /* Noizio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD430EFC1CB0F79F005EC16D /* Build configuration list for PBXNativeTarget "Noizio" */;
+			buildPhases = (
+				1B8609DEF13719127187F8A9 /* Check Pods Manifest.lock */,
+				BD430EE11CB0F79F005EC16D /* Sources */,
+				BD430EE21CB0F79F005EC16D /* Frameworks */,
+				BD430EE31CB0F79F005EC16D /* Resources */,
+				DCF6C9059395FE79DB08A718 /* Embed Pods Frameworks */,
+				A66F61458CAB9D69B4BAB16E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Noizio;
+			productName = Noizio;
+			productReference = BD430EE51CB0F79F005EC16D /* Noizio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD430EDD1CB0F79F005EC16D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = DiegoSan;
+				TargetAttributes = {
+					BD430EE41CB0F79F005EC16D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = BD430EE01CB0F79F005EC16D /* Build configuration list for PBXProject "Noizio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD430EDC1CB0F79F005EC16D;
+			productRefGroup = BD430EE61CB0F79F005EC16D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD430EE41CB0F79F005EC16D /* Noizio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD430EE31CB0F79F005EC16D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD430F171CB0F939005EC16D /* 6_sound_day_1.caf in Resources */,
+				BD430F1A1CB0F939005EC16D /* 9_sound_space_1.caf in Resources */,
+				BD430F1D1CB0F939005EC16D /* 12_sound_farm_1.caf in Resources */,
+				BD430F191CB0F939005EC16D /* 8_sound_river_1.caf in Resources */,
+				BD430F1C1CB0F939005EC16D /* 11_sound_train_1.caf in Resources */,
+				BD430EF81CB0F79F005EC16D /* LaunchScreen.storyboard in Resources */,
+				BD430EF51CB0F79F005EC16D /* Assets.xcassets in Resources */,
+				BD430F161CB0F939005EC16D /* 5_sound_wind_1.caf in Resources */,
+				BD430F141CB0F939005EC16D /* 3_sound_fire_1.caf in Resources */,
+				BD430F111CB0F939005EC16D /* 0_sound_tea_1.caf in Resources */,
+				BD430EF31CB0F79F005EC16D /* Main.storyboard in Resources */,
+				BD430F1E1CB0F939005EC16D /* 13_sound_chimes_1.caf in Resources */,
+				BD430F181CB0F939005EC16D /* 7_sound_night_1.caf in Resources */,
+				BD430F151CB0F939005EC16D /* 4_sound_water_1.caf in Resources */,
+				BD430F1B1CB0F939005EC16D /* 10_sound_yacht_1.caf in Resources */,
+				BD430F001CB0F920005EC16D /* SoundsSettings.plist in Resources */,
+				BD430F201CB0F939005EC16D /* purr-purr.caf in Resources */,
+				BD430F121CB0F939005EC16D /* 1_sound_thunder_1.caf in Resources */,
+				BD430F131CB0F939005EC16D /* 2_sound_rain_1.caf in Resources */,
+				BD430F1F1CB0F939005EC16D /* 14_sound_whale_1.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B8609DEF13719127187F8A9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A66F61458CAB9D69B4BAB16E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Noizio/Pods-Noizio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCF6C9059395FE79DB08A718 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Noizio/Pods-Noizio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD430EE11CB0F79F005EC16D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD430EF01CB0F79F005EC16D /* ViewController.m in Sources */,
+				BD430EED1CB0F79F005EC16D /* AppDelegate.m in Sources */,
+				BD430F241CB0FD79005EC16D /* NavViewController.m in Sources */,
+				BD430EEA1CB0F79F005EC16D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BD430EF11CB0F79F005EC16D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD430EF21CB0F79F005EC16D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD430EF61CB0F79F005EC16D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD430EF71CB0F79F005EC16D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD430EFA1CB0F79F005EC16D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD430EFB1CB0F79F005EC16D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD430EFD1CB0F79F005EC16D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD7060125F39158F63A8619F /* Pods-Noizio.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Noizio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DiegoSan.Noizio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD430EFE1CB0F79F005EC16D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 234E96C4B2B8A74709F379CF /* Pods-Noizio.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Noizio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DiegoSan.Noizio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD430EE01CB0F79F005EC16D /* Build configuration list for PBXProject "Noizio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD430EFA1CB0F79F005EC16D /* Debug */,
+				BD430EFB1CB0F79F005EC16D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD430EFC1CB0F79F005EC16D /* Build configuration list for PBXNativeTarget "Noizio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD430EFD1CB0F79F005EC16D /* Debug */,
+				BD430EFE1CB0F79F005EC16D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD430EDD1CB0F79F005EC16D /* Project object */;
+}
