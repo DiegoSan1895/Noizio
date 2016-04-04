@@ -11,114 +11,16 @@
 #import <AVFoundation/AVFoundation.h>
 #import "DSButton.h"
 #import "YYKit.h"
+#import "DSTableCell.h"
+#import "PlayerControl.h"
 
-#define kCellHeight 64
-
-@class DSTableCell;
-@protocol DSTableCellDelegate <NSObject>
-@optional
-- (void)cellWasClicked:(DSTableCell *)cell;
-- (void)sliderValueChanged: (DSTableCell *)cell;
-@end
-
-@interface DSTableCell : UITableViewCell
-@property (nonatomic, strong) UIImageView *avatar;
-@property (nonatomic, strong) UILabel *nameLabel;
-@property (nonatomic, strong) UISlider *volumSlider;
-@property (nonatomic, weak) id<DSTableCellDelegate> delegate;
-@property (nonatomic, assign) BOOL isPlaying;
-@property (nonatomic, strong) AVPlayer *player;
-@property (nonatomic, strong) AVPlayerItem *item;
-@property (nonatomic, copy) NSString *playingAvatarIamge;
-@property (nonatomic, copy) NSString *pauseAvatarIamge;
-@end
-
-@implementation DSTableCell
-
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    self.backgroundColor = [UIColor whiteColor];
-    self.size = CGSizeMake(kScreenWidth, kCellHeight);
-    self.contentView.size = self.size;
-    
-    _avatar = [UIImageView new];
-    _avatar.size = CGSizeMake(kCellHeight / 2, kCellHeight / 2);
-    _avatar.backgroundColor = [UIColor clearColor];
-    _avatar.center = CGPointMake(kCellHeight / 2, kCellHeight / 2);
-    _avatar.contentMode = UIViewContentModeScaleAspectFit;
-    [self.contentView addSubview:_avatar];
-    
-    _nameLabel = [UILabel new];
-    _nameLabel.size = CGSizeMake(kScreenWidth - kCellHeight, kCellHeight / 2);
-    _nameLabel.backgroundColor = [UIColor clearColor];
-    _nameLabel.right = self.contentView.right;
-    [self.contentView addSubview:_nameLabel];
-    
-    __weak typeof(self) _self = self;
-    
-    _volumSlider = [UISlider new];
-    _volumSlider.size = _nameLabel.size;
-    _volumSlider.width -= 26;
-    _volumSlider.tintColor = [UIColor blackColor];
-    _volumSlider.left = _nameLabel.left;
-    _volumSlider.bottom = self.contentView.bottom;
-    _volumSlider.value = 0.4;
-    [_volumSlider setThumbImage:[UIImage imageNamed:@"Line"] forState:UIControlStateNormal];
-    [_volumSlider addBlockForControlEvents:UIControlEventValueChanged block:^(id  _Nonnull sender) {
-        [_self.delegate sliderValueChanged:_self];
-    }];
-    [self.contentView addSubview:_volumSlider];
-    
-    UIImageView *bottomLine = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"line1"]];
-    bottomLine.size = CGSizeMake(kScreenWidth, 1);
-    [self.contentView addSubview:bottomLine];
-    
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithActionBlock:^(id  _Nonnull sender) {
-        [_self.delegate cellWasClicked:_self];
-    }];
-    [self.contentView addGestureRecognizer:tap];
-    
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playbackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:_item];
-    return self;
-}
-
-- (void)prepareForReuse{
-    _player = nil;
-    _item = nil;
-}
-
-- (void)playbackFinished: (NSNotification *)notifacation{
-    [_player seekToTime:CMTimeMake(0, 1)];
-    [_player play];
-}
-
-- (void)dealloc{
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-}
-
-- (void)setIsPlaying:(BOOL)isPlaying{
-    _isPlaying = isPlaying;
-    if (_isPlaying) {
-        _avatar.image = [UIImage imageNamed:_playingAvatarIamge];
-        _nameLabel.alpha = 1;
-        _volumSlider.alpha = 1;
-        _volumSlider.minimumTrackTintColor = [UIColor blackColor];
-    }else{
-        _avatar.image = [UIImage imageNamed:_pauseAvatarIamge];
-        _nameLabel.alpha = 0.3;
-        _volumSlider.alpha = 0.3;
-        _volumSlider.minimumTrackTintColor = _volumSlider.maximumTrackTintColor;
-    }
-}
-@end
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, DSTableCellDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *soundsArray;
-@property (nonatomic, strong) NSMutableArray *palyerArray;
+@property (nonatomic, strong) NSMutableArray *controls;
 @property (nonatomic, strong) DSButton *titleButton;
-@property (nonatomic, assign) BOOL isPlaying;
+@property (nonatomic) BOOL isPlaying;
 @end
 
 @implementation ViewController
@@ -152,15 +54,26 @@
     _tableView.rowHeight = 64;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.allowsSelection = NO;
+    _tableView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
     
     NSString *path = [[NSBundle mainBundle]pathForResource:@"SoundsSettings" ofType:@"plist"];
-    _soundsArray = [NSArray arrayWithPlistData:[NSData dataWithContentsOfFile:path]];
-    _palyerArray = [NSMutableArray new];
+    _soundsArray = [NSMutableArray arrayWithPlistData:[NSData dataWithContentsOfFile:path]];
+    _controls = [NSMutableArray new];
     
     NSError *error = [NSError new];
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+    _isPlaying = NO;
 }
 
+
+- (void)setIsPlaying:(BOOL)isPlaying{
+    _isPlaying = isPlaying;
+    if (isPlaying) {
+        [_titleButton setImage:[UIImage imageNamed:@"pause-button"] forState:UIControlStateNormal];
+    }else{
+        [_titleButton setImage:[UIImage imageNamed:@"play-button"] forState:UIControlStateNormal];
+    }
+}
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
@@ -180,11 +93,23 @@
 
 - (void)titleButtonDidPressed{
     if (!_isPlaying) {
-        [_titleButton setImage:[UIImage imageNamed:@"pause-button"] forState:UIControlStateNormal];
-        [_palyerArray makeObjectsPerformSelector:@selector(pause)];
-    }else{
         [_titleButton setImage:[UIImage imageNamed:@"play-button"] forState:UIControlStateNormal];
-        [_palyerArray makeObjectsPerformSelector:@selector(play)];
+        for (PlayerControl *control in _controls) {
+            if (control.isPlaying) {
+                [control.player pause];
+                control.isPlaying = !control.isPlaying;
+                [control.cell changeToPauseState];
+            }
+        }
+    }else{
+        [_titleButton setImage:[UIImage imageNamed:@"pause-button"] forState:UIControlStateNormal];
+        for (PlayerControl *control in _controls) {
+            if (!control.isPlaying) {
+                [control.player play];
+                control.isPlaying = !control.isPlaying;
+                [control.cell changeToPlayingState];
+            }
+        }
     }
     _isPlaying = !_isPlaying;
     
@@ -200,9 +125,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    DSTableCell *cell = (DSTableCell *)[tableView dequeueReusableCellWithIdentifier:@"cell"];
+    DSTableCell *cell = (DSTableCell *)[tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"%ld",(long)indexPath.row]];
     if (!cell) {
-        cell = [[DSTableCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [[DSTableCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[NSString stringWithFormat:@"%ld",(long)indexPath.row]];
     }
     NSDictionary *soundDict = _soundsArray[indexPath.row];
     
@@ -210,31 +135,66 @@
     cell.pauseAvatarIamge = soundDict[@"disabled_icon"];
     cell.nameLabel.text = soundDict[@"display_name"];
     cell.delegate = self;
-    cell.isPlaying = NO;
     
-    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:soundDict[@"sound_name"] withExtension:@"caf" ];
-    AVPlayerItem *item = [[AVPlayerItem alloc]initWithURL:soundURL];
-    AVPlayer *player = [[AVPlayer alloc]initWithPlayerItem:item];
-    [_palyerArray insertObject:player atIndex:indexPath.row];
-    cell.player = player;
-    cell.player.volume = cell.volumSlider.value;
-    cell.item = item;
-    
+    [cell changeToPauseState];
+
+    for (PlayerControl *control in _controls) {
+        if (control.index == indexPath.row) {
+            if (control.isPlaying) {
+                [cell changeToPlayingState];
+            }else{
+                [cell changeToPauseState];
+            }
+            
+            cell.volumSlider.value = control.volum;
+        }
+    }
     
     return cell;
 }
 
 - (void)cellWasClicked:(DSTableCell *)cell{
-    if (cell.isPlaying) {
-        [cell.player pause];
-    }else{
-        [cell.player play];
+    if (!cell.control) {
+        cell.control = [PlayerControl new];
+        [_controls addObject:cell.control];
+        cell.control.index = [_tableView indexPathForCell:cell].row;
+        NSDictionary *soundDict = _soundsArray[[_tableView indexPathForCell:cell].row];
+        NSURL *soundURL = [[NSBundle mainBundle] URLForResource:soundDict[@"sound_name"] withExtension:@"caf" ];
+        
+        cell.control.cell = cell;
+        cell.control.soundURL = soundURL;
+        cell.control.playerItem = [[AVPlayerItem alloc]initWithURL:cell.control.soundURL];
+        cell.control.player = [[AVPlayer alloc]initWithPlayerItem:cell.control.playerItem];
+        cell.control.volum = cell.volumSlider.value;
+        cell.control.player.volume = cell.control.volum;
     }
-    cell.isPlaying = !cell.isPlaying;
+    if (cell.control.isPlaying) {
+        [cell.control.player pause];
+        [cell changeToPauseState];
+    }else{
+        [cell.control.player play];
+        [cell changeToPlayingState];
+        _isPlaying = YES;
+    }
+    cell.control.isPlaying = !cell.control.isPlaying;
+    cell.control.index = [_tableView indexPathForCell:cell].row;
+    
+    for (PlayerControl *control in _controls) {
+        NSLog(@"%ld, %d",control.index, control.isPlaying);
+        if (control.isPlaying) {
+            [self setIsPlaying:YES];
+            break;
+        }else{
+            [self setIsPlaying:NO];
+        }
+    }
+    printf("\n");
+
 }
 
 - (void)sliderValueChanged:(DSTableCell *)cell{
-    cell.player.volume = cell.volumSlider.value;
+    cell.control.player.volume = cell.volumSlider.value;
+    cell.control.volum = cell.volumSlider.value;
 }
 
 @end

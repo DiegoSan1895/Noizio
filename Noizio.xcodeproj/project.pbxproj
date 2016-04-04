@@ -34,6 +34,8 @@
 		BD430F241CB0FD79005EC16D /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430F231CB0FD79005EC16D /* NavViewController.m */; };
 		BD430F271CB101E6005EC16D /* DSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430F261CB101E6005EC16D /* DSButton.m */; };
 		BD430F2A1CB104DB005EC16D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430F291CB104DB005EC16D /* AboutViewController.m */; };
+		BD5C72001CB1D9DF00E8B5FF /* PlayerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C71FF1CB1D9DF00E8B5FF /* PlayerControl.m */; };
+		BD5C72031CB1DA9B00E8B5FF /* DSTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C72021CB1DA9A00E8B5FF /* DSTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,10 @@
 		BD430F261CB101E6005EC16D /* DSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSButton.m; sourceTree = "<group>"; };
 		BD430F281CB104DB005EC16D /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		BD430F291CB104DB005EC16D /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		BD5C71FE1CB1D9DF00E8B5FF /* PlayerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerControl.h; sourceTree = "<group>"; };
+		BD5C71FF1CB1D9DF00E8B5FF /* PlayerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerControl.m; sourceTree = "<group>"; };
+		BD5C72011CB1DA9A00E8B5FF /* DSTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTableCell.h; sourceTree = "<group>"; };
+		BD5C72021CB1DA9A00E8B5FF /* DSTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTableCell.m; sourceTree = "<group>"; };
 		CD7060125F39158F63A8619F /* Pods-Noizio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noizio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Noizio/Pods-Noizio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,10 @@
 				BD430F231CB0FD79005EC16D /* NavViewController.m */,
 				BD430F251CB101E6005EC16D /* DSButton.h */,
 				BD430F261CB101E6005EC16D /* DSButton.m */,
+				BD5C72011CB1DA9A00E8B5FF /* DSTableCell.h */,
+				BD5C72021CB1DA9A00E8B5FF /* DSTableCell.m */,
+				BD5C71FE1CB1D9DF00E8B5FF /* PlayerControl.h */,
+				BD5C71FF1CB1D9DF00E8B5FF /* PlayerControl.m */,
 				BD430EF11CB0F79F005EC16D /* Main.storyboard */,
 				BD430EF41CB0F79F005EC16D /* Assets.xcassets */,
 				BD430EF61CB0F79F005EC16D /* LaunchScreen.storyboard */,
@@ -323,9 +333,11 @@
 				BD430F2A1CB104DB005EC16D /* AboutViewController.m in Sources */,
 				BD430EF01CB0F79F005EC16D /* ViewController.m in Sources */,
 				BD430EED1CB0F79F005EC16D /* AppDelegate.m in Sources */,
+				BD5C72001CB1D9DF00E8B5FF /* PlayerControl.m in Sources */,
 				BD430F241CB0FD79005EC16D /* NavViewController.m in Sources */,
 				BD430EEA1CB0F79F005EC16D /* main.m in Sources */,
 				BD430F271CB101E6005EC16D /* DSButton.m in Sources */,
+				BD5C72031CB1DA9B00E8B5FF /* DSTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
