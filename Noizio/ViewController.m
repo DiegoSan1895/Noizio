@@ -20,11 +20,11 @@
 @property (nonatomic, strong) NSMutableArray *soundsArray;
 @property (nonatomic, strong) NSMutableArray *controls;
 @property (nonatomic, strong) DSButton *titleButton;
-@property (nonatomic) BOOL isPlaying;
+@property (nonatomic, assign) BOOL isPlaying;
 @end
 
 @implementation ViewController
-
+@synthesize isPlaying = _isPlaying;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -63,6 +63,14 @@
     NSError *error = [NSError new];
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
     _isPlaying = NO;
+    
+    NSString *documentPath = [[[UIApplication sharedApplication]documentsPath]stringByAppendingPathComponent:@"test.plist"];
+    [_soundsArray writeToFile:documentPath atomically:YES];
+    
+    NSMutableDictionary *test = _soundsArray[0];
+    NSNumber *number = @100;
+    [test setObject:number forKey:@"id"];
+    [[NSUserDefaults standardUserDefaults]setObject:_soundsArray forKey:@"test"];
 }
 
 

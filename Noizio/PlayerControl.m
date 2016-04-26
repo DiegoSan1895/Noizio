@@ -8,6 +8,7 @@
 
 #import "PlayerControl.h"
 
+static NSString *const kPlayerControlKey = @"playerControl";
 @implementation PlayerControl
 
 - (instancetype)init{
@@ -30,4 +31,6 @@
     _volum = volum;
     _player.volume = volum;
 }
+
+
 @end
