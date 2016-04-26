@@ -68,11 +68,13 @@
     _avatar.image = [UIImage imageNamed:_pauseAvatarIamge];
     _nameLabel.alpha = 0.3;
     _volumSlider.alpha = 0.3;
+    _volumSlider.userInteractionEnabled = NO;
 }
 
 - (void)changeToPlayingState{
     _avatar.image = [UIImage imageNamed:_playingAvatarIamge];
     _nameLabel.alpha = 1;
     _volumSlider.alpha = 1;
+    _volumSlider.userInteractionEnabled = YES;
 }
 @end

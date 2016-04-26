@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YYKit.h"
 
 @interface AppDelegate ()
 
@@ -21,4 +22,10 @@
     return YES;
 }
 
+- (void)applicationWillResignActive:(UIApplication *)application{
+    NSMutableArray *testArray = [NSMutableArray new];
+    NSString *path = [[[UIApplication sharedApplication]documentsPath]stringByAppendingPathComponent:@"test.plist"];
+    [testArray writeToFile:path atomically:YES];
+    
+}
 @end

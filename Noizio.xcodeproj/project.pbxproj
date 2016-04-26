@@ -36,6 +36,7 @@
 		BD430F2A1CB104DB005EC16D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD430F291CB104DB005EC16D /* AboutViewController.m */; };
 		BD5C72001CB1D9DF00E8B5FF /* PlayerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C71FF1CB1D9DF00E8B5FF /* PlayerControl.m */; };
 		BD5C72031CB1DA9B00E8B5FF /* DSTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C72021CB1DA9A00E8B5FF /* DSTableCell.m */; };
+		BD5C72061CB2320600E8B5FF /* PlayerControlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5C72051CB2320600E8B5FF /* PlayerControlManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,8 @@
 		BD5C71FF1CB1D9DF00E8B5FF /* PlayerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerControl.m; sourceTree = "<group>"; };
 		BD5C72011CB1DA9A00E8B5FF /* DSTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTableCell.h; sourceTree = "<group>"; };
 		BD5C72021CB1DA9A00E8B5FF /* DSTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTableCell.m; sourceTree = "<group>"; };
+		BD5C72041CB2320600E8B5FF /* PlayerControlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerControlManager.h; sourceTree = "<group>"; };
+		BD5C72051CB2320600E8B5FF /* PlayerControlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerControlManager.m; sourceTree = "<group>"; };
 		CD7060125F39158F63A8619F /* Pods-Noizio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noizio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Noizio/Pods-Noizio.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +148,8 @@
 				BD5C72021CB1DA9A00E8B5FF /* DSTableCell.m */,
 				BD5C71FE1CB1D9DF00E8B5FF /* PlayerControl.h */,
 				BD5C71FF1CB1D9DF00E8B5FF /* PlayerControl.m */,
+				BD5C72041CB2320600E8B5FF /* PlayerControlManager.h */,
+				BD5C72051CB2320600E8B5FF /* PlayerControlManager.m */,
 				BD430EF11CB0F79F005EC16D /* Main.storyboard */,
 				BD430EF41CB0F79F005EC16D /* Assets.xcassets */,
 				BD430EF61CB0F79F005EC16D /* LaunchScreen.storyboard */,
@@ -335,6 +340,7 @@
 				BD430EED1CB0F79F005EC16D /* AppDelegate.m in Sources */,
 				BD5C72001CB1D9DF00E8B5FF /* PlayerControl.m in Sources */,
 				BD430F241CB0FD79005EC16D /* NavViewController.m in Sources */,
+				BD5C72061CB2320600E8B5FF /* PlayerControlManager.m in Sources */,
 				BD430EEA1CB0F79F005EC16D /* main.m in Sources */,
 				BD430F271CB101E6005EC16D /* DSButton.m in Sources */,
 				BD5C72031CB1DA9B00E8B5FF /* DSTableCell.m in Sources */,
